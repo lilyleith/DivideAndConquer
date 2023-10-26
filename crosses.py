@@ -63,7 +63,7 @@ def InversionCount(arr):
     mid = len(arr) // 2
     left, left_inversions = InversionCount(arr[:mid])
     right, right_inversions = InversionCount(arr[mid:])
-    merged, merged_inversions = MergeInversion(left, right)
+    merged, merged_inversions = MergeInversions(left, right)
     total_inversions = left_inversions + right_inversions + merged_inversions
     return merged, total_inversions
 
